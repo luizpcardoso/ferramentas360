@@ -2,6 +2,7 @@ import "./globals.css";
 import { ReactNode } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: "Ferramentas360 - Soluções online para facilitar seu dia a dia",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         <main className="flex-grow container mx-auto px-4 py-8">
           {children}
+          <Analytics />
         </main>
         <Footer />
       </body>
