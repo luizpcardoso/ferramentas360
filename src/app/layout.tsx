@@ -12,6 +12,14 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
+       <head>
+      
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1342640603806360"
+          crossOrigin="anonymous"
+        ></script>
+      </head>
       <body className="min-h-screen flex flex-col bg-gray-50 text-gray-900 antialiased">
         <Header />
         <main className="flex-grow container mx-auto px-4 py-8">
