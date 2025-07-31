@@ -3,9 +3,26 @@ import { Metadata } from "next";
 import { tools } from "@/data/tools";
 
 export const metadata: Metadata = {
-  title: "Ferramentas360 - Ferramentas online úteis",
+  title: "Ferramentas360 - Ferramentas online grátis para produtividade",
   description:
-    "Utilize ferramentas online como contador de palavras, gerador de senhas, calculadora de tempo e muito mais — tudo gratuito e acessível.",
+    "Acesse ferramentas online como contador de palavras, gerador de senhas, cronômetro, conversores e muito mais. Tudo gratuito, rápido e fácil de usar.",
+  alternates: {
+    canonical: "https://ferramentas360.com.br/",
+  },
+  openGraph: {
+    title: "Ferramentas360 - Ferramentas online grátis para produtividade",
+    description:
+      "Use ferramentas online como contador de palavras, gerador de senhas, cronômetro e mais. Tudo gratuito e acessível.",
+    url: "https://ferramentas360.com.br/",
+    siteName: "Ferramentas360",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ferramentas360 - Ferramentas online úteis e gratuitas",
+    description:
+      "Ferramentas como contador de palavras, conversores, geradores e validadores para facilitar seu dia.",
+  },
 };
 
 export default function HomePage() {

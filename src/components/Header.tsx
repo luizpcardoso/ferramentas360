@@ -34,12 +34,12 @@ export function Header() {
           <Link href="/" className="text-gray-700 hover:text-blue-600">
             Início
           </Link>
-          <Link href="/ferramentas" className="text-gray-700 hover:text-blue-600">
+          {/* <Link href="/ferramentas" className="text-gray-700 hover:text-blue-600">
             Ferramentas
           </Link>
           <Link href="/sobre" className="text-gray-700 hover:text-blue-600">
             Sobre
-          </Link>
+          </Link> */}
         </nav>
       </div>
 
@@ -54,7 +54,7 @@ export function Header() {
             >
               Início
             </Link>
-            <Link
+            {/* <Link
               href="/ferramentas"
               onClick={closeMenu}
               className="block py-2 text-gray-700 hover:text-blue-600"
@@ -67,7 +67,7 @@ export function Header() {
               className="block py-2 text-gray-700 hover:text-blue-600"
             >
               Sobre
-            </Link>
+            </Link> */}
           </div>
         </div>
       )}
