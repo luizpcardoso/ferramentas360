@@ -12,6 +12,22 @@ import {
     FaRulerCombined,
     FaWeight,
   } from "react-icons/fa";
+import {
+  FaCalculator,
+  FaPercent,
+  FaFont,
+  FaExchangeAlt,
+  FaBirthdayCake,
+  FaEnvelope,
+  FaKey,
+  FaFingerprint,
+  FaCode,
+  FaTable,
+  FaSortNumericDown,
+  FaEraser,
+  FaCopy,
+  FaSortAlphaDown,
+} from "react-icons/fa";
   
   export const tools = [
     {
@@ -85,6 +101,96 @@ import {
       description: "Calcule seu Índice de Massa Corporal facilmente.",
       href: "/ferramentas/calculadora-de-imc",
       icon: FaWeight,
+    },
+    {
+      title: "Calculadora de Juros Compostos",
+      description: "Simule juros compostos com aportes e prazos.",
+      href: "/ferramentas/calculadora-de-juros-compostos",
+      icon: FaCalculator,
+    },
+    {
+      title: "Conversor de Texto",
+      description: "Converta para maiúsculas, minúsculas e título.",
+      href: "/ferramentas/conversor-de-texto",
+      icon: FaFont,
+    },
+    {
+      title: "Calculadora de Porcentagem",
+      description: "Calcule aumentos, descontos e proporções.",
+      href: "/ferramentas/calculadora-de-porcentagem",
+      icon: FaPercent,
+    },
+    {
+      title: "Calculadora de MDC e MMC",
+      description: "Encontre o MDC e o MMC de números.",
+      href: "/ferramentas/calculadora-mdc-mmc",
+      icon: FaSortNumericDown,
+    },
+    {
+      title: "Conversor de Bases Numéricas",
+      description: "Converta entre binário, decimal e hexadecimal.",
+      href: "/ferramentas/conversor-de-bases",
+      icon: FaExchangeAlt,
+    },
+    {
+      title: "Calculadora de Idade",
+      description: "Descubra sua idade exata em anos e dias.",
+      href: "/ferramentas/calculadora-de-idade",
+      icon: FaBirthdayCake,
+    },
+    {
+      title: "Validador de Email",
+      description: "Verifique se um endereço de email é válido.",
+      href: "/ferramentas/validador-de-email",
+      icon: FaEnvelope,
+    },
+    {
+      title: "Gerador de UUID",
+      description: "Gere UUIDs v4 únicos e copie com um clique.",
+      href: "/ferramentas/gerador-de-uuid",
+      icon: FaKey,
+    },
+    {
+      title: "Gerador de Hash SHA-256",
+      description: "Crie hash SHA-256 de qualquer texto.",
+      href: "/ferramentas/gerador-de-hash-sha256",
+      icon: FaFingerprint,
+    },
+    {
+      title: "Formatador de JSON",
+      description: "Beleze e compacte JSON com validação.",
+      href: "/ferramentas/formatador-de-json",
+      icon: FaCode,
+    },
+    {
+      title: "CSV para JSON",
+      description: "Converta dados CSV em JSON estruturado.",
+      href: "/ferramentas/conversor-csv-para-json",
+      icon: FaTable,
+    },
+    {
+      title: "Números Romanos",
+      description: "Converta entre romano e número decimal.",
+      href: "/ferramentas/conversor-numeros-romanos",
+      icon: FaSortNumericDown,
+    },
+    {
+      title: "Remover Acentos",
+      description: "Remova acentos e normaliza textos.",
+      href: "/ferramentas/removedor-de-acentos",
+      icon: FaEraser,
+    },
+    {
+      title: "Remover Duplicadas",
+      description: "Elimine linhas repetidas de uma lista.",
+      href: "/ferramentas/removedor-de-duplicatas",
+      icon: FaCopy,
+    },
+    {
+      title: "Ordenar Lista",
+      description: "Ordene linhas alfabeticamente ou por número.",
+      href: "/ferramentas/ordenador-de-lista",
+      icon: FaSortAlphaDown,
     },
   ];
   
