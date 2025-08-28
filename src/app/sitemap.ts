@@ -3,9 +3,11 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ferramentas360.com.br';
-  return tools.map(tool => ({
-    url: `${baseUrl}${tool.href}`, 
+
+  const routes = ['/', ...tools.map((tool) => tool.href)];
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
     lastModified: new Date(),
   }));
-  
 }
