@@ -13,7 +13,7 @@ export function ToolSidebar() {
       {/* Mobile toggle button */}
       <div className="lg:hidden mb-4">
         <button
-          className="flex items-center gap-2 text-sm text-blue-700 border border-blue-700 px-3 py-1 rounded"
+          className="flex items-center gap-2 text-sm text-blue-600 border border-blue-600 px-3 py-1 rounded"
           onClick={() => setOpen(!open)}
         >
           <FaBars className="w-4 h-4" />
@@ -33,7 +33,7 @@ export function ToolSidebar() {
             <li key={tool.href}>
               <Link
                 href={tool.href}
-                className="flex items-center gap-2 text-sm text-blue-700 hover:underline"
+                className="flex items-center gap-2 text-sm text-blue-600 hover:underline"
               >
                 <FaChevronRight className="w-3 h-3" />
                 {tool.title}

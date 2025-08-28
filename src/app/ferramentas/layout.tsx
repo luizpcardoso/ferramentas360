@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { ToolSidebar } from "@/components/ToolSidebar";
+import { AdPlaceholder } from "@/components/AdPlaceholder";
 
 export default function FerramentasLayout({ children }: { children: ReactNode }) {
   return (
@@ -7,15 +8,11 @@ export default function FerramentasLayout({ children }: { children: ReactNode })
       <ToolSidebar />
 
       <main className="flex-1">
-        <div className="mb-6 text-center text-sm text-gray-400 italic">
-          [ espaço reservado para anúncios ]
-        </div>
+        <AdPlaceholder slot="tool-top" />
 
         {children}
 
-        <div className="mt-10 text-center text-sm text-gray-400 italic">
-          [ espaço reservado para anúncios ]
-        </div>
+        <AdPlaceholder slot="tool-bottom" />
       </main>
     </section>
   );
