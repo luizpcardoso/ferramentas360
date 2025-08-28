@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useState } from "react";
 
-function parseCSV(text: string): unknown[] {
+function parseCSV(text: string): Record<string, string>[] {
   // Simples: separa por linhas, usa vírgula como separador, respeita aspas duplas
   const lines = text.split(/\r?\n/).filter((l) => l.trim().length > 0);
   if (lines.length === 0) return [];
@@ -34,7 +33,7 @@ function parseCSV(text: string): unknown[] {
   const headers = parseLine(lines[0]);
   return lines.slice(1).map((line) => {
     const cols = parseLine(line);
-    const obj: any = {};
+    const obj: Record<string, string> = {};
     headers.forEach((h, idx) => {
       obj[h] = cols[idx] ?? "";
     });
@@ -52,8 +51,9 @@ export default function CsvToJsonConverter() {
     try {
       const rows = parseCSV(csv);
       setJson(JSON.stringify(rows, null, 2));
-    } catch (e: any) {
-      setJson("Erro ao converter: " + (e?.message || "verifique o CSV"));
+    } catch (e: unknown) {
+      const msg = e instanceof Error ? e.message : String(e);
+      setJson("Erro ao converter: " + (msg || "verifique o CSV"));
     }
   };
 

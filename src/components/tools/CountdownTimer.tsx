@@ -31,25 +31,24 @@ export default function CountdownTimer() {
   };
 
   useEffect(() => {
-    if (isRunning && timeLeft > 0) {
-      intervalRef.current = setInterval(() => {
-        setTimeLeft((prev) => {
-          const updated = prev - 1000;
-          if (updated <= 0) {
-            clearInterval(intervalRef.current!);
-            setIsRunning(false);
-            setHasEnded(true);
-            return 0;
-          }
-          return updated;
-        });
-      }, 1000);
-    }
+    if (!isRunning) return;
+    intervalRef.current = setInterval(() => {
+      setTimeLeft((prev) => {
+        const updated = prev - 1000;
+        if (updated <= 0) {
+          if (intervalRef.current) clearInterval(intervalRef.current);
+          setIsRunning(false);
+          setHasEnded(true);
+          return 0;
+        }
+        return updated;
+      });
+    }, 1000);
 
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [isRunning, timeLeft]);
+  }, [isRunning]);
 
   return (
     <div className="max-w-md mx-auto space-y-4 text-center">
