@@ -49,7 +49,7 @@ export default function CountdownTimer() {
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [isRunning]);
+  }, [isRunning, timeLeft]);
 
   return (
     <div className="max-w-md mx-auto space-y-4 text-center">
