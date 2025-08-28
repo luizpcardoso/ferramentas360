@@ -43,9 +43,9 @@ function parseCSV(text: string): any[] {
 
 export default function CsvToJsonConverter() {
   const [csv, setCsv] = useState("coluna1,coluna2\nvalor1,valor2");
-  const [json, setJson] = useState("[
-  {\"coluna1\": \"valor1\", \"coluna2\": \"valor2\"}
-]");
+  const [json, setJson] = useState(`[
+  {"coluna1": "valor1", "coluna2": "valor2"}
+]`);
 
   const convert = () => {
     try {
@@ -77,4 +77,3 @@ export default function CsvToJsonConverter() {
     </div>
   );
 }
-
