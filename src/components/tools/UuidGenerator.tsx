@@ -1,11 +1,13 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useState } from "react";
 
 function uuidv4() {
-  if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
-    return (crypto as any).randomUUID();
+  if (
+    typeof crypto !== "undefined" &&
+    typeof (crypto as Crypto).randomUUID === "function"
+  ) {
+    return (crypto as Crypto).randomUUID();
   }
   // Fallback simples
   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
@@ -51,4 +53,3 @@ export default function UuidGenerator() {
     </div>
   );
 }
-

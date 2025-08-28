@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useMemo, useState } from "react";
@@ -43,7 +42,9 @@ export default function BaseConverter() {
           <select
             className="mt-1 w-full border border-gray-300 rounded-lg p-2"
             value={base}
-            onChange={(e) => setBase(e.target.value as any)}
+            onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+              setBase(e.target.value as "2" | "10" | "16")
+            }
           >
             <option value="2">Binário (2)</option>
             <option value="10">Decimal (10)</option>
@@ -69,4 +70,3 @@ export default function BaseConverter() {
     </div>
   );
 }
-

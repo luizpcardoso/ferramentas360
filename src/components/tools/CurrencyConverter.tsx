@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useState } from "react";
@@ -29,7 +28,7 @@ export default function CurrencyConverter() {
       }
 
       setResult(data.result);
-    } catch (err) {
+    } catch {
       setError("Erro de rede. Verifique sua conexão.");
     } finally {
       setLoading(false);

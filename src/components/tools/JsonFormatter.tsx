@@ -12,8 +12,9 @@ export default function JsonFormatter() {
     try {
       const obj = JSON.parse(input);
       setOutput(JSON.stringify(obj, null, space));
-    } catch (e: any) {
-      setError("JSON inválido: " + (e?.message || "erro ao parsear"));
+    } catch (e: unknown) {
+      const msg = e instanceof Error ? e.message : String(e);
+      setError("JSON inválido: " + (msg || "erro ao parsear"));
       setOutput("");
     }
   };
@@ -57,4 +58,3 @@ export default function JsonFormatter() {
     </div>
   );
 }
-
