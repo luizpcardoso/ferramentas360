@@ -15,6 +15,9 @@ const inter = Inter({
 export const metadata = {
   title: "Ferramentas360 - Soluções online para facilitar seu dia a dia",
   description: "Use ferramentas como contador de palavras, gerador de senhas e muito mais.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
